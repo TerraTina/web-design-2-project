@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 48em) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  body {
+    font-size: 20px;
+  }
+}
