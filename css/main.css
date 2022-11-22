@@ -12,8 +12,13 @@ body {
   margin: 0;
 }
 
+.card-closed .closable {
+  display: none;
+}
 
-
+.card-open .closable {
+  display: block;
+}
 
 
 
