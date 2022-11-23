@@ -1,4 +1,4 @@
-// toggle between two css styles and button text
+// button click to toggle between two css styles and button text. (this) in html and (btn) in js selects for that particular button press. Works on the article button's directly nested in with .parentNode, so don't nest button further in article.
 function readMoreLess(btn) {
   var card = btn.parentNode;
 // enter first css class name in quotes that you want to start with
