@@ -12,6 +12,114 @@ body {
   margin: 0;
 }
 
+img {
+  width: 100%;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  color: #FDC04F;
+}
+/* navigation here */
+
+.nav-flex {
+  display: none;
+}
+
+.nav-flex ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  list-style-type: none;
+}
+
+.nav-flex ul li a {
+  text-decoration: none;
+  color: #FDC04F;
+  font-family: 'Rhodium Libre', serif;
+  font-size: 1.2rem;
+}
+
+.nav-flex img {
+  width: 4em;
+}
+
+/* hamburger menu toggle here */
+
+
+.nav-toggle {
+  display: none;
+}
+
+.hamb {
+  height: 4em;
+  background-color: #534E6B;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label {
+  cursor: pointer;
+  padding: 1em;
+}
+
+.hamb-line {
+  background: #FDC04F;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 30px;
+}
+
+.hamb-line::before, .hamb-line::after {
+  background: #FDC04F;
+  content: '';
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb-line::before {
+  top: 10px;
+}
+
+.hamb-line::after {
+  top: -10px;
+}
+
+/* input checked here */
+
+.nav-toggle:checked ~ .nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #534E6B;
+  height: 12em;
+}
+
+.nav-toggle:checked ~ .hamb {
+  padding-top: 2em;
+  height: 0;
+}
+
+.nav-toggle:checked ~ .hamb .nav-toggle-label .hamb-line {
+  background: transparent;
+}
+
+.nav-toggle:checked ~ .hamb .nav-toggle-label .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.nav-toggle:checked ~ .hamb .nav-toggle-label .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+  }
+
+/* javascript here*/
+
 .card-closed .closable {
   display: none;
 }
@@ -26,9 +134,39 @@ body {
 
 
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 46em) {
   body {
     font-size: 18px;
+  }
+
+  .hamb, .nav-toggle {
+    display: none;
+  }
+
+  .nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #534E6B;
+    height: 15em;
+  }
+
+  .nav-flex {
+    justify-content: center;
+  }
+
+  .nav-flex ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: -5em;
+  }
+
+  .nav-flex ul li a {
+    margin-left: 5em;
+  }
+
+  .nav-flex img {
+    margin-left: 5em;
   }
 }
 
