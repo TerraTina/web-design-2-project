@@ -20,7 +20,14 @@ header {
   top: 0;
   width: 100%;
   color: #FDC04F;
+  font-family: 'Rhodium Libre', serif;
 }
+
+header h1 {
+  font-size: 2.844rem;
+}
+
+
 /* navigation here */
 
 .nav-flex {
@@ -170,8 +177,12 @@ header {
   }
 }
 
-@media only screen and (min-width: 64em) {
+@media only screen and (min-width: 80em) {
   body {
     font-size: 20px;
+  }
+
+  .nav-flex img {
+
   }
 }
