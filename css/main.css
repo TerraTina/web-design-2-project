@@ -23,8 +23,28 @@ header {
   font-family: 'Rhodium Libre', serif;
 }
 
-header h1 {
+.hero-banner {
+  width: 100%;
+  height: 60vh;
+  background-color: #534E6B;
+  background-image: url('https://images.unsplash.com/photo-1566262258598-53deb7089bf8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80');
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(83, 78, 107, .5);
+}
+
+header h1, header h2 {
   font-size: 2.844rem;
+  margin: 0;
+  margin-left: 1em;
+  position: absolute;
+  bottom: 7em;
+  z-index: 2;
+}
+
+header h1 {
+  margin-bottom: 1.2em;
 }
 
 
@@ -146,6 +166,8 @@ header h1 {
     font-size: 18px;
   }
 
+/* navigation here*/
+
   .hamb, .nav-toggle {
     display: none;
   }
@@ -155,7 +177,7 @@ header h1 {
     align-items: center;
     justify-content: space-evenly;
     background-color: #534E6B;
-    height: 15em;
+    height: 12em;
   }
 
   .nav-flex {
@@ -175,6 +197,31 @@ header h1 {
   .nav-flex img {
     margin-left: 5em;
   }
+
+  .hero-banner {
+    height: 80vh;
+  }
+
+/* header headings */
+
+  header h1, header h2 {
+    position: relative;
+    bottom: -6em;
+  }
+
+  header h1 {
+    margin-left: 3em;
+  }
+
+  header h2 {
+    margin-left: .5em;
+    margin-top: 0;
+  }
+
+  header hgroup {
+    display: flex;
+  }
+
 }
 
 @media only screen and (min-width: 80em) {
@@ -182,7 +229,12 @@ header h1 {
     font-size: 20px;
   }
 
-  .nav-flex img {
-
+  .hero-banner {
+    height: 90vh;
   }
+
+  header h1, header h2 {
+    bottom: -7em;
+  }
+
 }
