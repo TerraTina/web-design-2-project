@@ -55,7 +55,6 @@ header h2 {
 
 .wrapper {
   padding: 0 1em;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -191,8 +190,7 @@ section h3 + p {
 #about img {
   object-fit: cover;
   max-height: 400px;
-  margin-top: 1em;
-  transform: translate(0, .5em);
+  margin: 1em 0;
 }
 
 #recent-articles {
@@ -207,7 +205,7 @@ section h3 + p {
 
 #recent-articles dt {
   font-size: 1.728rem;
-  margin-top: .5em;
+  margin-top: 1em;
 }
 
 #recent-articles dt a {
@@ -338,6 +336,46 @@ footer {
     margin-left: 3em;
   }
 
+/* homepage */
+
+  #about img {
+    max-height: 450px;
+  }
+
+  .grid-template-area {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "define history"
+      "img img";
+  }
+
+  .define-scifi {
+    grid-area: define;
+  }
+
+  .scifi-history {
+    grid-area: history;
+  }
+
+  .neon {
+    grid-area: img;
+  }
+
+  .grid-column-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+  }
+
+  #recent-articles form {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+  }
+
+
 }
 
 @media only screen and (min-width: 80em) {
@@ -359,5 +397,53 @@ footer {
     height: 38em;
   }
 
+  /* homepage here */
+
+  #recent-articles h2, #about h2{
+    text-align: center;
+    margin: 0;
+  }
+
+  #about h3, #about img {
+    margin: 0;
+  }
+
+    .grid-template-area {
+      display: grid;
+      margin-top: 2em;
+      padding-bottom: 1em;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "img define history";
+    }
+
+    #recent-articles dt, #recent-articles dl, #recent-articles p {
+      margin: 0;
+    }
+
+    #recent-articles form input {
+      margin-top: 0;
+    }
+
+    #recent-articles label, #recent-articles form button {
+      margin-top: 1em;
+    }
+
+    .grid-column-3 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 1fr;
+      margin-top: 2em;
+    }
+
+    .grid-column-2 {
+      grid-column-gap: 0;
+    }
+
+    #recent-articles form {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
 
 }
