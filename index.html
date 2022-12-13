@@ -33,17 +33,23 @@
     </hgroup>
   </header>
 
-  <main role="main" class="wrapper">
+  <main role="main">
     <section id="about">
-      <h2>About</h2>
-      <h3>What is scifi?</h3>
-      <p>Science fiction is an incredible genre of speculative fiction which can be defined in many ways. I like to use Tom Shippy’s <i>fabril</i> definition of scifi, fiction that is <q>urban, disruptive, future-oriented, eager for novelty.</q> It confronts the pastoral, which concerns itself  <q>with the past, the rural, and nostalgia.</q></p>
-      <p>However, it is not so easy to define a genre as broad as this. Kathryn also proposes <q>scifi is the religious art of science,</q> while Adam Roberts offers that scifi depicts a life entirely different from reader’s own.</p>
-      <h2>A quick history</h2>
-      <p>Arguably, scifi began in the late 19<sup>th</sup> to early 20<sup>th</sup> century when writers started to digest the swift technological developments of their time. The first scifi film, <i>Le Voyage dans la Lune</i>, was made as early as 1902. During the 1920s, scifi pulp magizines flourished and solified community interest in the genre.</p>
+      <div class="wrapper">
+        <h2>About</h2>
+        <div class="define-scifi">
+          <h3>What is scifi?</h3>
+          <p>Science fiction is an incredible genre of speculative fiction which can be defined in many ways. I like to use Tom Shippy’s <i>fabril</i> definition of scifi, fiction that is <q>urban, disruptive, future-oriented, eager for novelty.</q> It confronts the pastoral, which concerns itself  <q>with the past, the rural, and nostalgia.</q></p>
+          <p>However, it is not so easy to define a genre as broad as this. Kathryn also proposes <q>scifi is the religious art of science,</q> while Adam Roberts offers that scifi depicts a life entirely different from reader’s own.</p>
+        </div>
+        <div class="history-scifi">
+          <h3>A quick history</h3>
+          <p>Arguably, scifi began in the late 19<sup>th</sup> to early 20<sup>th</sup> century when writers started to digest the swift technological developments of their time. The first scifi film, <i>Le Voyage dans la Lune</i>, was made as early as 1902. During the 1920s, scifi pulp magizines flourished and solified community interest in the genre.</p>
+        </div>
+      </div>
       <img src="images/street-view.jpg" alt="Busy street bathed in neon lights">
     </section>
-    <section id="recent-articles">
+    <section id="recent-articles" class="wrapper">
       <h2>Recent Articles</h2>
       <dl class="articles-list">
         <dt><a href="html-pages/texts.html #wild-seed">Wild Seed</a></dt>
@@ -55,12 +61,14 @@
         <dt><a href="html-pages/digital-media.html #arrival">Arrival</a></dt>
         <dd><time datetime="2020-11-01"></time>2020-11-1</dd>
       </dl>
-      <h2>Get notified when new articles are published:</h2>
-      <form class="form-inline" action="#">
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Enter email" name="email">
-        <button type="submit">Submit</button>
-      </form>
+      <div class="notification">
+        <p>Get notified when new articles are published:</p>
+        <form class="form-inline" action="#">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter email" name="email">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </section>
   </main>
 
