@@ -260,7 +260,7 @@ section h3 + p {
 
 .yellow-background {
   background-color: #F9D48E;
-  padding-top: .2em;
+  padding: .2em 0;
 }
 
 .card-closed, .card-open {
@@ -272,6 +272,7 @@ section h3 + p {
 .card-closed {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .card-open {
@@ -310,18 +311,22 @@ section h3 + p {
   margin: 0 0 .2em;
 }
 
+.card-open h2 {
+  text-align: center;
+}
+
 .smaller-text {
-  font-size: 1.728rem;
+  font-size: 1.44rem;
 }
 
 .card-closed img {
+  height: 50vw;
   object-fit: cover;
-  max-height: 300px;
 }
 
 .card-open img {
+  height: 80vw;
   object-fit: cover;
-  max-height: 500px;
 }
 
 .article-publication {
@@ -496,7 +501,7 @@ footer {
 /* content pages here */
 
 .yellow-background {
-  padding-top: 0;
+  padding: 0;
 }
 
   .card-grid section {
@@ -523,17 +528,20 @@ footer {
     grid-area: closed1 closed2 closed3 closed4 closed5;
   }
 
-  .card-grid img {
-    max-height: 300px;
+  .card-grid .card-closed img {
+    height: 25vw;
   }
 
   .card-grid .card-open img {
-    max-height: 400px;
+    height: 50vw;
+  }
+
+  .cardr-text {
+    font-size: 1.2rem;
   }
 
   .card-open h2 {
     font-size: 2.074rem;
-    text-align: center;
   }
 
   .text-columns {
@@ -554,7 +562,7 @@ footer {
   }
 
 
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 74em) {
   body {
     font-size: 20px;
     max-width: 1500px;
@@ -638,6 +646,14 @@ footer {
     "open open open open"
     "closed1 closed2 closed3 closed4"
     "closed5 . . .";
+  }
+
+  .card-grid .card-closed img {
+    height: 15vw;
+  }
+
+  .card-grid .card-open img {
+    height: 45vw;
   }
 
 }
