@@ -239,6 +239,8 @@ section h3 + p {
   width: 100%;
   height: 4em;
   margin-top: 1em;
+  font-family: 'Overpass', sans-serif;
+  color: #1E184B;
 }
 
 #recent-articles form input {
@@ -253,6 +255,120 @@ section h3 + p {
   background-color: #FDC04F;
   cursor: pointer;
 }
+
+/* content pages here */
+
+.yellow-background {
+  background-color: #F9D48E;
+  padding-top: .2em;
+}
+
+.card-closed, .card-open {
+  background-color: #E3E1EB;
+  padding: 2em 1em;
+  margin: 1em auto;
+}
+
+.card-closed {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-open {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "h2"
+    "img"
+    "closable"
+    "date"
+    "button";
+}
+
+.card-open h2 {
+  grid-area: h2;
+}
+
+.card-open img {
+  grid-area: img;
+}
+
+.card-open .article-publication {
+  grid-area: date;
+}
+
+.card-open .closable {
+  grid-area: closable;
+}
+
+.card-open .readmoreless-button {
+  grid-area: button;
+}
+
+.card-closed h2, .card-open h2 {
+  margin: 0 0 .2em;
+}
+
+.smaller-text {
+  font-size: 1.728rem;
+}
+
+.card-closed img {
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.card-open img {
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.article-publication {
+  font-size: 1.2rem;
+}
+
+.same-line {
+  display: flex;
+  flex-grow: 1;
+  align-items: baseline;
+}
+
+.publication-info .same-line dt {
+  font-size: 1.728rem;
+  font-family: 'Rhodium Libre', serif;
+}
+
+.publication-info .same-line dd {
+  margin-left: .3em;
+  font-size: 1.2rem;
+}
+
+.readmoreless-button {
+  background-color: #B8B3CC;
+  color: #1E184B;
+  font-family: 'Overpass', sans-serif;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: .7em 1em .5em;
+}
+
+.card-closed .readmoreless-button, .card-open .readmoreless-button {
+  margin: 1em auto 0;
+}
+
+
+/* text page here */
+
+#do-androids-dream-of-electric-sheep img {
+  object-position: left top;
+}
+
+#foundation-and-earth img {
+  object-position: right bottom;
+}
+
 
 
 footer {
@@ -376,12 +492,72 @@ footer {
   }
 
 
+
+/* content pages here */
+
+.yellow-background {
+  padding-top: 0;
 }
+
+  .card-grid section {
+    margin: 0;
+  }
+
+  .card-grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "open open"
+      "closed1 closed2"
+      "closed4 closed3"
+      "closed5 .";
+    }
+
+  .card-open {
+    grid-area: open;
+  }
+
+  .card-closed {
+    grid-area: closed1 closed2 closed3 closed4 closed5;
+  }
+
+  .card-grid img {
+    max-height: 300px;
+  }
+
+  .card-grid .card-open img {
+    max-height: 400px;
+  }
+
+  .card-open h2 {
+    font-size: 2.074rem;
+    text-align: center;
+  }
+
+  .text-columns {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-open {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-areas:
+      "h2 h2"
+      "img img"
+      "closable closable"
+      ". date"
+      "button .";
+  }
+
 
 @media only screen and (min-width: 80em) {
   body {
     font-size: 20px;
-    max-width: 2000px;
+    max-width: 1500px;
     margin: 0 auto;
   }
 
@@ -396,6 +572,8 @@ footer {
   .hero-banner {
     height: 38em;
   }
+
+
 
   /* homepage here */
 
@@ -445,5 +623,21 @@ footer {
       display: grid;
       grid-template-rows: 1fr 1fr;
     }
+
+
+
+/* content pages here */
+
+
+.card-grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "open open open open"
+    "closed1 closed2 closed3 closed4"
+    "closed5 . . .";
+  }
 
 }
